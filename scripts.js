@@ -48,8 +48,8 @@ class Collection {
       'bookCollection',
       JSON.stringify({
         bookColl: this.books,
-      })
-    ),
+      },)
+    )
   }
 }
 
