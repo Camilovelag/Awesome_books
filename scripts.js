@@ -44,12 +44,7 @@ class Collection {
     this.populateStorage();
   }
   populateStorage() {
-    localStorage.setItem(
-      'bookCollection',
-      JSON.stringify({
-        bookColl: this.books,
-      },)
-    )
+    localStorage.setItem('bookCollection',JSON.stringify({bookColl: this.books,}),)
   }
 }
 
