@@ -40,9 +40,10 @@ class Collection {
     const arr = data.getAttribute('data-value').split('-');
     this.books = this.books.filter(
       (item) => item.title + item.author !== arr[0] + arr[1]
-    );
+    )
     this.populateStorage();
   }
+  
   populateStorage() {
     localStorage.setItem(
       'bookCollection',
