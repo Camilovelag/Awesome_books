@@ -39,14 +39,15 @@ class Collection {
   removeFromColl(data) {
     const arr = data.getAttribute('data-value').split('-');
     this.books = this.books.filter(
-      (item) => item.title + item.author !== arr[0] + arr[1]
+      (item) => item.title + item.author !== arr[0] + arr[1],
     );
     this.populateStorage();
   }
+  
   populateStorage() {
     localStorage.setItem(
       'bookCollection',
-      JSON.stringify({ bookColl: this.books })
+      JSON.stringify({ bookColl: this.books }),
     );
   }
 }
