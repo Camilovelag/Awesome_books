@@ -1,8 +1,8 @@
+/* eslint-disable max-classes-per-file */
 const inputTitle = document.getElementById('title');
 const inputAuthor = document.getElementById('author');
 const submitBtn = document.querySelector('.add-btn');
 const bookSection = document.querySelector('.books');
-const txt = document.querySelector('form > p');
 class Collection {
   constructor(books = []) {
     this.books = books;
