@@ -43,7 +43,7 @@ class Collection {
     );
     this.populateStorage();
   }
-  
+
   populateStorage() {
     localStorage.setItem(
       'bookCollection',
