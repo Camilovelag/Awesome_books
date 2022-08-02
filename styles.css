@@ -1,1 +1,13 @@
-/* css file */
+
+  body {
+    width: 75%;
+    margin: 100px auto 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    justify-content: center;
+  }
+  
+ 
