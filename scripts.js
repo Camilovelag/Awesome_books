@@ -29,8 +29,7 @@ class Collection {
     if (this) {
       const div = document.createElement('div');
       div.className = 'book-wraper';
-      div.innerHTML = `<h3>"${data.title}" by</h3>
-                    <h3>${data.author}</h3>
+      div.innerHTML = `<h3>"${data.title}" by ${data.author}</h3>
                     <button data-value="${data.title}-${data.author}" type="button" class ="remove-button">Remove</button>`;
       bookSection.appendChild(div);
     }
