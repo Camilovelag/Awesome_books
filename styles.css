@@ -10,14 +10,15 @@ body {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-.add-books > form {
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.75rem;
 }
 
 .books {
-  border: 1px solid rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
   width: 40vw;
 }
 
@@ -54,4 +55,20 @@ button {
 
 .add-btn {
   margin-left: auto;
+}
+
+.div-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 25vw;
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+input {
+  width: 30vw;
+  height: 1rem;
+  border: 3px solid rgb(0, 0, 0);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
