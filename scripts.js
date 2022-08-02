@@ -38,7 +38,7 @@ class Collection {
   removeFromColl(data) {
     const arr = data.getAttribute('data-value').split('-');
     this.books = this.books.filter(
-      (item) => item.title + item.author !== arr[0] + arr[1],
+      (item) => item.title + item.author !== arr[0] + arr[1]
     );
     this.populateStorage();
   }
@@ -46,7 +46,7 @@ class Collection {
   populateStorage() {
     localStorage.setItem(
       'bookCollection',
-      JSON.stringify({ bookColl: this.books }),
+      JSON.stringify({ bookColl: this.books })
     );
   }
 }
@@ -69,3 +69,53 @@ if (localStorage.getItem('bookCollection')) {
 submitBtn.addEventListener('click', () => {
   coll.add(new Book(inputTitle.value, inputAuthor.value));
 });
+
+document.addEventListener('click', (e) => {
+  const { target } = e;
+  if (!target.matches('nav a')) {
+    return;
+  }
+
+  e.preventDefault();
+  urlRoute();
+});
+
+const urlRoutes = {
+  '/': {
+    template: '/index.html',
+    title: '',
+    description: '',
+  },
+  '/Add': {
+    template: '/add.html',
+    title: '',
+    description: '',
+  },
+  '/contact': {
+    template: '/contact.html',
+    title: '',
+    description: '',
+  },
+};
+
+const urlRoute = (event) => {
+  event = event || window.event;
+  event.preventDefault();
+  window.history.pushState({}, '', event.target.href);
+  urlLocationHandler();
+};
+
+const urlLocationHandler = async () => {
+  const location = window.location.pathname;
+  if (location.length == 0) {
+    location = '/';
+  }
+
+  const route = urlRoute(location);
+  const html = await fetch(route.template).then((response) => response.text());
+  document.getElementById('content').innerHTML = html;
+};
+
+window.onpopstate = urlLocationHandler;
+window.route = urlRoute;
+urlLocationHandler();
