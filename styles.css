@@ -28,3 +28,30 @@ body {
 .book-wraper:nth-child(even) {
   background-color: white;
 }
+
+.book-wraper {
+  display: flex;
+  align-items: center;
+  height: 2.0rem;
+  padding: 0.3rem;
+}
+
+.remove-button {
+  align-self: center;
+  margin-left: auto;
+  height: auto;
+}
+
+button {
+  border: 1px solid;
+  box-shadow: 3px 3px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.book-wraper h3 {
+  font-size: 1rem;
+}
+
+.add-btn {
+  margin-left: auto;
+}
