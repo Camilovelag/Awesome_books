@@ -22,19 +22,19 @@ body {
   width: 40vw;
 }
 
+.book-wraper {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0.3rem;
+}
+
 .book-wraper:nth-child(odd) {
   background-color: rgb(214, 208, 208);
 }
 
 .book-wraper:nth-child(even) {
   background-color: white;
-}
-
-.book-wraper {
-  display: flex;
-  align-items: center;
-  height: 2.0rem;
-  padding: 0.3rem;
 }
 
 .remove-button {
