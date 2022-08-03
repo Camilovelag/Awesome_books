@@ -154,5 +154,5 @@ const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
 
 const todayDate = new Date();
 const dateSection = document.querySelector('.date');
-dateSection.textContent = `${monthNames[todayDate.getMonth()]} - ${todayDate.getDay() + 2 }th - ${todayDate.getFullYear()} 
+dateSection.textContent = `${monthNames[todayDate.getMonth()]} - ${todayDate.getDay()}th - ${todayDate.getFullYear()} 
 , ${todayDate.getHours()}:${todayDate.getMinutes()} hs`;

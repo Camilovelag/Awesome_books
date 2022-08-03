@@ -114,11 +114,22 @@ input {
 }
 
 .date {
-  width: 80%;
   display: flex;
   justify-content: flex-end;
+  margin: 5px 10px;
 }
 
 .toggle {
   display: none;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  width:90vw;
+  padding: 1rem;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+  margin: 1rem;
+  border: 3px solid rgb(0, 0, 0);
 }
