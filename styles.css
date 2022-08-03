@@ -14,14 +14,6 @@ header {
   width: 100%;
 }
 
-.logo {
-  list-style: none;
-  text-decoration: none;
-  color: black;
-  margin-right: auto;
-  font-weight: bold;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -111,7 +103,7 @@ input {
   font-weight: bold;
 }
 
-.menu-list>li>a:hover {
+.menu-list > li > a:hover {
   color: red;
 }
 
@@ -141,4 +133,12 @@ footer {
 
 .copyright {
   font-weight: bold;
+}
+
+.logo-list {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: auto;
 }
