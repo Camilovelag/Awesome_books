@@ -113,4 +113,12 @@ input {
   color: red;
 }
 
+.date {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
 
+.toggle {
+  display: none;
+}

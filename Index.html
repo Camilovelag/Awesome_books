@@ -14,11 +14,12 @@
     <nav class='nav-menu'>
       <ul class='menu-list'>
         <h1>Awesome Books</h1>
-        <li class='list'><a href="/">List</a></li>
-        <li class='add-new'><a href="/Add New"> Add New </a></li>
-        <li class='contact'><a href="/contact"> Contact</a></li>
+        <li id='list'><a href="/">List</a></li>
+        <li id='add-new'><a href=""> Add New </a></li>
+        <li id='contact'><a href=""> Contact</a></li>
       </ul>
     </nav>
+    <div class="date"></div>
   </header>
 <section class="books-section">
     <h1>All awesome books</h1>
@@ -26,7 +27,7 @@
     </div>
 </section>
 
-<section class="add-books">
+<section class="add-books toggle">
     <h2>Add a new book</h2>
     <form class='container'>
         <input type="text" name="title" id="title" placeholder="Title" required>
@@ -34,5 +35,16 @@
         <button type="button" class="add-btn" >Add</button>
         <p></p>
     </form>
+</section>
+<section class="contact-section toggle">
+  <h2 class="contact-heading">Contact Information</h2>
+  <p class="contact-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti sint excepturi modi
+      quod nesciunt tempore, harum ipsam amet sequi alias, animi ipsum impedit itaque, debitis ducimus! Rerum
+      impedit rem ullam?</p>
+  <ul class="contact-list">
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+  </ul>
 </section>
 </body>
