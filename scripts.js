@@ -70,7 +70,7 @@ submitBtn.addEventListener('click', () => {
   coll.add(new Book(inputTitle.value, inputAuthor.value));
 });
 
-/*document.addEventListener('click', (e) => {
+/* document.addEventListener('click', (e) => {
   const { target } = e;
   if (!target.matches('nav a')) {
     return;
@@ -148,11 +148,24 @@ navContact.addEventListener('click', (evt) => {
   addWindow.classList.add('toggle');
 });
 
-const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ];
 
 const todayDate = new Date();
 const dateSection = document.querySelector('.date');
-dateSection.textContent = `${monthNames[todayDate.getMonth()]} - ${todayDate.getDay()}th - ${todayDate.getFullYear()} 
+dateSection.textContent = `${
+  monthNames[todayDate.getMonth()]
+} - ${todayDate.getDay()}th - ${todayDate.getFullYear()} 
 , ${todayDate.getHours()}:${todayDate.getMinutes()} hs`;
