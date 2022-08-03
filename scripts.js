@@ -146,6 +146,7 @@ navContact.addEventListener('click', (evt) => {
   contactWindow.classList.remove('toggle');
   booksWindow.classList.add('toggle');
   addWindow.classList.add('toggle');
+  document.getElementById('contact').style.color = 'blue';
 });
 
 const monthNames = [

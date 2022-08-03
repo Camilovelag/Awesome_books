@@ -18,6 +18,8 @@ header {
   list-style: none;
   text-decoration: none;
   color: black;
+  margin-right: auto;
+  font-weight: bold;
 }
 
 .container {
@@ -84,7 +86,6 @@ input {
 }
 
 .nav-menu {
-  margin-top: 0;
   margin: 5px 10px;
 }
 
@@ -99,11 +100,6 @@ input {
   justify-content: flex-end;
 }
 
-.menu-list > h1 {
-  font-size: 1rem;
-  margin-right: auto;
-}
-
 .menu-list > li {
   list-style: none;
 }
@@ -115,8 +111,12 @@ input {
   font-weight: bold;
 }
 
-.menu-list > li > a:hover {
+.menu-list>li>a:hover {
   color: red;
+}
+
+.menu-list > li > a:active {
+  color: blue;
 }
 
 .date {
@@ -130,10 +130,9 @@ input {
 }
 
 footer {
-  position:fixed;
-  bottom:0;
-  width:90vw;
-  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 90vw;
   background-color: #fff;
   padding: 0.3rem 1rem;
   margin: 1rem;
