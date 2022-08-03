@@ -69,3 +69,112 @@ if (localStorage.getItem('bookCollection')) {
 submitBtn.addEventListener('click', () => {
   coll.add(new Book(inputTitle.value, inputAuthor.value));
 });
+
+/* document.addEventListener('click', (e) => {
+  const { target } = e;
+  if (!target.matches('nav a')) {
+    return;
+  }
+
+  e.preventDefault();
+  urlRoute();
+});
+
+const urlRoutes = {
+  '/': {
+    template: '/index.html',
+    title: '',
+    description: '',
+  },
+  '/Add': {
+    template: '/add.html',
+    title: '',
+    description: '',
+  },
+  '/contact': {
+    template: '/contact.html',
+    title: '',
+    description: '',
+  },
+};
+
+const urlRoute = (event) => {
+  event = event || window.event;
+  event.preventDefault();
+  window.history.pushState({}, '', event.target.href);
+  urlLocationHandler();
+};
+
+const urlLocationHandler = async () => {
+  const location = window.location.pathname;
+  if (location.length == 0) {
+    location = '/';
+  }
+
+  const route = urlRoute(location);
+  const html = await fetch(route.template).then((response) => response.text());
+  document.getElementById('content').innerHTML = html;
+};
+
+window.onpopstate = urlLocationHandler;
+window.route = urlRoute;
+urlLocationHandler(); */
+
+const navAdd = document.querySelector('#add-new');
+const navList = document.querySelector('#list');
+const navContact = document.querySelector('#contact');
+const booksWindow = document.querySelector('.books-section');
+const addWindow = document.querySelector('.add-books');
+const contactWindow = document.querySelector('.contact-section');
+
+navAdd.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  addWindow.classList.remove('toggle');
+  booksWindow.classList.add('toggle');
+  contactWindow.classList.add('toggle');
+  document.getElementById('cont-nav').style.color = 'black';
+  document.getElementById('list-nav').style.color = 'black';
+  document.getElementById('add-nav').style.color = 'blue';
+});
+
+navList.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  booksWindow.classList.remove('toggle');
+  addWindow.classList.add('toggle');
+  contactWindow.classList.add('toggle');
+  document.getElementById('cont-nav').style.color = 'black';
+  document.getElementById('list-nav').style.color = 'blue';
+  document.getElementById('add-nav').style.color = 'black';
+});
+
+navContact.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  contactWindow.classList.remove('toggle');
+  booksWindow.classList.add('toggle');
+  addWindow.classList.add('toggle');
+  document.getElementById('cont-nav').style.color = 'blue';
+  document.getElementById('list-nav').style.color = 'black';
+  document.getElementById('add-nav').style.color = 'black';
+});
+
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+const todayDate = new Date();
+const dateSection = document.querySelector('.date');
+dateSection.textContent = `${
+  monthNames[todayDate.getMonth()]
+} - ${todayDate.getDay()}th - ${todayDate.getFullYear()} 
+, ${todayDate.getHours()}:${todayDate.getMinutes()} hs`;

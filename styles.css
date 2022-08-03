@@ -1,6 +1,6 @@
 body {
-  width: 75%;
-  margin: 100px auto 0 auto;
+  width: 100%;
+  margin: 5px auto 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,10 @@ body {
   gap: 1.75rem;
   justify-content: center;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+header {
+  width: 100%;
 }
 
 .container {
@@ -71,4 +75,70 @@ input {
   height: 1rem;
   border: 3px solid rgb(0, 0, 0);
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.nav-menu {
+  margin: 5px 10px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  gap: 1.5rem;
+  border: 3px solid black;
+  height: 30px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu-list > li {
+  list-style: none;
+}
+
+.menu-list > li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.menu-list > li > a:hover {
+  color: red;
+}
+
+.menu-list > li > a:active {
+  color: blue;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 10px;
+}
+
+.toggle {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 90vw;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+  margin: 1rem;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.copyright {
+  font-weight: bold;
+}
+
+.logo-list {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: auto;
 }
