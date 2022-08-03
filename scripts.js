@@ -38,7 +38,7 @@ class Collection {
   removeFromColl(data) {
     const arr = data.getAttribute('data-value').split('-');
     this.books = this.books.filter(
-      (item) => item.title + item.author !== arr[0] + arr[1],
+      (item) => item.title + item.author !== arr[0] + arr[1]
     );
     this.populateStorage();
   }
@@ -46,7 +46,7 @@ class Collection {
   populateStorage() {
     localStorage.setItem(
       'bookCollection',
-      JSON.stringify({ bookColl: this.books }),
+      JSON.stringify({ bookColl: this.books })
     );
   }
 }
@@ -132,6 +132,9 @@ navAdd.addEventListener('click', (evt) => {
   addWindow.classList.remove('toggle');
   booksWindow.classList.add('toggle');
   contactWindow.classList.add('toggle');
+  document.getElementById('cont-nav').style.color = 'black';
+  document.getElementById('list-nav').style.color = 'black';
+  document.getElementById('add-nav').style.color = 'blue';
 });
 
 navList.addEventListener('click', (evt) => {
@@ -139,6 +142,9 @@ navList.addEventListener('click', (evt) => {
   booksWindow.classList.remove('toggle');
   addWindow.classList.add('toggle');
   contactWindow.classList.add('toggle');
+  document.getElementById('cont-nav').style.color = 'black';
+  document.getElementById('list-nav').style.color = 'blue';
+  document.getElementById('add-nav').style.color = 'black';
 });
 
 navContact.addEventListener('click', (evt) => {
@@ -146,7 +152,9 @@ navContact.addEventListener('click', (evt) => {
   contactWindow.classList.remove('toggle');
   booksWindow.classList.add('toggle');
   addWindow.classList.add('toggle');
-  document.getElementById('contact').style.color = 'blue';
+  document.getElementById('cont-nav').style.color = 'blue';
+  document.getElementById('list-nav').style.color = 'black';
+  document.getElementById('add-nav').style.color = 'black';
 });
 
 const monthNames = [
