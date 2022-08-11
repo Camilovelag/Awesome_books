@@ -13,7 +13,7 @@
   "name": "awesome_books",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "version": "1.0.0",
-  "main": "scripts.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
