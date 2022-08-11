@@ -67,4 +67,3 @@ const dateWidget = document.querySelector('.date');
 const dateNow = DateTime.now();
 
 dateWidget.innerHTML = `${dateNow.monthLong}, ${dateNow.day}, ${dateNow.weekYear}, ${dateNow.hour}:${dateNow.minute}:${dateNow.second}`;
-
