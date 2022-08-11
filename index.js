@@ -1,7 +1,7 @@
 /* eslint-disable max-classes-per-file */
 
 import Collection from './modules/collection.js';
-import { DateTime } from "luxon";
+import { DateTime } from './modules/luxon.js';
 
 class Book {
   constructor(title, author) {
@@ -13,7 +13,6 @@ class Book {
 const inputTitle = document.getElementById('title');
 const inputAuthor = document.getElementById('author');
 const submitBtn = document.querySelector('.add-btn');
-const dateBox = document.querySelector('.date');
 
 const coll = new Collection();
 if (localStorage.getItem('bookCollection')) {
@@ -64,24 +63,8 @@ navContact.addEventListener('click', (evt) => {
   document.getElementById('add-nav').style.color = 'black';
 });
 
-const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+const dateWidget = document.querySelector('.date');
+const dateNow = DateTime.now();
 
-const todayDate = new Date();
-const dateSection = document.querySelector('.date');
-dateSection.textContent = `${
-  monthNames[todayDate.getMonth()]
-} - ${todayDate.getDay()}th - ${todayDate.getFullYear()} 
-, ${todayDate.getHours()}:${todayDate.getMinutes()} hs`;
+dateWidget.innerHTML = `${dateNow.monthLong}, ${dateNow.day}, ${dateNow.weekYear}, ${dateNow.hour}:${dateNow.minute}:${dateNow.second}`;
+
