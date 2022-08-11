@@ -6,6 +6,7 @@ export default class Collection {
   constructor(books = []) {
     this.books = books;
   }
+  
   add(data) {
     this.books.push(data);
     this.display(data);
@@ -14,6 +15,7 @@ export default class Collection {
     inputAuthor.value = '';
     inputTitle.value = '';
   }
+  
   remove() {
     const removeBtns = document.querySelectorAll('.remove-button');
     removeBtns[removeBtns.length - 1].addEventListener('click', (evt) => {
@@ -21,6 +23,7 @@ export default class Collection {
       bookSection.removeChild(evt.target.parentNode);
     });
   }
+  
   display(data) {
     if (this) {
       const div = document.createElement('div');
@@ -30,6 +33,7 @@ export default class Collection {
       bookSection.appendChild(div);
     }
   }
+  
   removeFromColl(data) {
     const arr = data.getAttribute('data-value').split('-');
     this.books = this.books.filter(
@@ -37,6 +41,7 @@ export default class Collection {
     );
     this.populateStorage();
   }
+  
   populateStorage() {
     localStorage.setItem(
       'bookCollection',
